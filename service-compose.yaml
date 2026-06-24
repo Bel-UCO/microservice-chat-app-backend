@@ -1,0 +1,6 @@
+services:
+  emqx:
+    image: emqx:latest
+    container_name: emqx
+    restart: unless-stopped
+ 
