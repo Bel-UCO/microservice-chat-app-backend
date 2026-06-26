@@ -1,0 +1,6 @@
+name: chat-app-backend
+
+include:
+  - ./database-compose.yaml
+  - ./service-compose.yaml
+  - ./logger-compose.yaml
