@@ -1,6 +1,7 @@
-var express = require("express");
-var router = express.Router();
-var requireAuth = require("../util/authMiddleware");
+const express = require("express");
+const requireAuth = require("../util/authMiddleware");
+
+const router = express.Router();
 
 router.get("/me", requireAuth, function (req, res) {
   res.json({
