@@ -50,5 +50,4 @@ volumes:
 
 networks:
   chat-app:
-    external: true
     name: chat-app
