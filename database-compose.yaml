@@ -11,7 +11,7 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
-      - webserver
+      - chat-app
 
   mysql-exporter:
     image: bitnami/mysqld-exporter:latest
@@ -25,7 +25,7 @@ services:
     ports:
       - "9104:9104"
     networks:
-      - webserver
+      - chat-app
     depends_on:
       - mysql
 
@@ -43,11 +43,12 @@ services:
     depends_on:
       - mysql
     networks:
-      - webserver
+      - chat-app
 
 volumes:
   mysql_data:
 
 networks:
-  webserver:
-    name: webserver
+  chat-app:
+    external: true
+    name: chat-app
