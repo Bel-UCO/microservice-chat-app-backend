@@ -4,3 +4,8 @@ include:
   - ./database-compose.yaml
   - ./service-compose.yaml
   - ./logger-compose.yaml
+
+networks:
+  default:
+    name: chat-app
+    driver: bridge
