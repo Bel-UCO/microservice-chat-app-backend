@@ -6,11 +6,14 @@ scrape_configs:
     static_configs:
       - targets:
           - "mysql-exporter:9104"
+
   - job_name: "chat-app-backend"
+    metrics_path: /metrics
     static_configs:
       - targets:
           - "chat-app-backend:3000"
-  - job_name: "chat-app-frontend"
+
+  - job_name: "chat-app-frontend-nginx"
     static_configs:
       - targets:
-          - "chat-app-frontend:5173"
+          - "chat-app-frontend-nginx-exporter:9113"
