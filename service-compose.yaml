@@ -1,5 +1,7 @@
 services:
   chat-app-backend:
+    env_file:
+    - .env
     build:
       context: .
       dockerfile: ./dockerfile/main.dockerfile
